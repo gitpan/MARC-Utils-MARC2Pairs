@@ -1,12 +1,12 @@
-use Data::Dumper;
+#---------------------------------------------------------------------
+# MARC-Utils-MARC2Pairs.t
 
 use Test::More tests => 3;
 BEGIN {
-    use_ok('MARC::Utils::MARC2Pairs',
-        qw( marc2pairs pairs2marc ) );
+    use_ok('MARC::Utils::MARC2Pairs', qw( marc2pairs pairs2marc ) );
 }
 
-# loaded below ...
+# loaded in BEGIN blocks below ...
 my $pairs;
 my $marc_as_formatted;
 
@@ -17,8 +17,9 @@ is( $marc_record->as_formatted(), $marc_as_formatted, "marc_record->as_formatted
 $pairs = marc2pairs( $marc_record );
 
 $marc_record = pairs2marc( $pairs );
-is( $marc_record->as_formatted(), $marc_as_formatted, "marc_record->as_formatted" );
+is( $marc_record->as_formatted(), $marc_as_formatted, "marc_record->as_formatted (round trip)" );
 
+#---------------------------------------------------------------------
 BEGIN {
     $pairs =
     [

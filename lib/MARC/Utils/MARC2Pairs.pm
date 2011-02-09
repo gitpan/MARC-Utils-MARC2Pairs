@@ -1,10 +1,11 @@
+#---------------------------------------------------------------------
 package MARC::Utils::MARC2Pairs;
 
-use 5.008008;
+use 5.008002;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 our (@ISA, @EXPORT_OK);
 BEGIN {
@@ -16,6 +17,7 @@ BEGIN {
 use MARC::Record;
 use Data::Pairs qw( pairs_add pairs_get_array );
 
+#---------------------------------------------------------------------
 sub marc2pairs {
     my( $marc_record ) = @_;
 
@@ -51,6 +53,7 @@ sub marc2pairs {
     $pairs;  # returned
 }
 
+#---------------------------------------------------------------------
 sub pairs2marc {
     my( $pairs ) = @_;
 
@@ -85,7 +88,6 @@ sub pairs2marc {
 
     $marc_record;  #returned
 }
-
 
 1;
 __END__
@@ -124,7 +126,7 @@ Brad Baxter, E<lt>bbaxter@cpan.orgE<gt>
 Copyright (C) 2011 by Brad Baxter
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.8 or,
+it under the same terms as Perl itself, either Perl version 5.8.2 or,
 at your option, any later version of Perl 5 you may have available.
 
 =cut

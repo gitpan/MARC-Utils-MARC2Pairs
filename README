@@ -1,5 +1,5 @@
-MARC-Utils-MARC2Pairs version 0.01
-==================================
+MARC-Utils-MARC2Pairs
+=====================
 
 INSTALLATION
 
@@ -16,6 +16,7 @@ This module requires these other modules and libraries:
 
     MARC::Record
     Data::Pairs
+    Test::More
 
 COPYRIGHT AND LICENCE
 
@@ -24,7 +25,6 @@ Put the correct copyright and licence information here.
 Copyright (C) 2011 by Brad Baxter
 
 This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.8 or,
+it under the same terms as Perl itself, either Perl version 5.8.2 or,
 at your option, any later version of Perl 5 you may have available.
-
 
